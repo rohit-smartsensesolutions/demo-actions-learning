@@ -14,11 +14,18 @@ jobs:
             echo "This is my first job"
             ls -la
             cat README.md
+
+        - name: Insall cowsay
+          run: sudo apt-get install -y cowsay
+
         - name: Generate ASCII Contents
           run: cowsay -f dragon "Rohit Solanki" >> dragon.txt
+      
+        - name: List Files
+          run: ls -la
 
-        # - name: List Files
-        #   run: ls -la
+        - name: Read files
+          run: cat dragon.txt
 
-        # - name: Read files
-        #   run: cat README.md
+        - name: Read files
+          run: cat README.md
