@@ -9,11 +9,16 @@ jobs:
         - name: Checkout code
           uses: actions/checkout@v4
 
-        - name: My First Job
-          run: echo "This is my first job"
+        - name: List and Read file
+          run: |
+            echo "This is my first job"
+            ls -la
+            cat README.md
+        - name: Generate ASCII Contents
+          run: cowsay -f dragon "Rohit Solanki" >> dragon.txt
 
-        - name: List Files
-          run: ls -la
+        # - name: List Files
+        #   run: ls -la
 
-        - name: Read files
-          run: cat README.md
+        # - name: Read files
+        #   run: cat README.md
